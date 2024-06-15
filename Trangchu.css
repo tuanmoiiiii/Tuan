@@ -1,0 +1,130 @@
+
+.container {
+    text-align: center;
+    width: 700px;
+    height: 150PX;
+    margin-top: 60PX;
+    margin-left: 370px;
+    display: flex;
+}
+
+.image-slider img {
+    width: 700px;
+    height: 150px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+#menu{
+    height: 650px;
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 10%;
+    border: solid 2px rgba(128, 128, 128, 0.397);
+    background-color: white;
+    border-radius: 7px;
+
+}
+.menu1{
+    width: 28%;
+    height: 620px;
+    margin-top: 20px;
+    margin-left: 4%;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+
+}
+.vien{
+    width: 94%;
+    height: 235px;
+    margin-top: 40px;
+    margin-left: 3%;
+    border: solid 1px red;
+    border-radius: 15px;
+    background-color: red;
+}
+.sp{
+    width: 99%;
+    height: 210px;
+    margin-top: 24px;
+    border: solid 1px red;
+    border-radius: 15px;
+    background-color: white;
+}
+.anhsp{
+    margin-top: 5px;
+    margin-left: 10%;
+    width: 80%;
+    height: 200px;
+}
+.hovers{
+    width: 94%;
+    margin-left: 3%;
+    height: 30px;
+    background-color: rgba(128, 128, 128, 0.627);
+    border-radius: 5px;
+}
+button{
+    border: none;
+    background-color: rgba(128, 128, 128, 0.211);
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+.menu1:hover{
+    border: solid 2px rgba(128, 128, 128, 0.397);
+    border-radius: 7px;
+    .vien{
+        margin-top: 20px;
+        width: 96%;
+        margin-left: 2%;
+    }
+    .Pay{
+        visibility: visible;
+    }
+}
+.km{
+    width: 45px;
+    height: 30pxpx;
+    border-radius: 50%;
+    margin-left: 7px;
+    overflow: hidden;
+    margin-top: 5px;
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.km:hover{
+    border: solid 1px black;
+}
+.Pay{
+    background-color: rgba(255, 0, 0, 0.853);
+    width: 170px;
+    height: 40px;
+    margin-left: 75px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    visibility: hidden;
+}
+.Pay:hover{
+    background-color: brown;
+}
+button:hover {
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+}
+#p6:hover{
+    color: blue;
+}
+#p3:hover{
+    color: blue;
+}
+#p0:hover{
+    color: blue;
+}

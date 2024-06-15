@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="b1">
+        <h1 style="margin-left: 40%;">Đăng ký</h1>
+        <input class="in4" id="ten" type="text" placeholder="Tên đăng nhập" value="">
+        <input class="in4" id="email" type="text" placeholder="Email hoặc số di động" value="">
+        <input class="in4" id="pass" type="password" placeholder="Mật khẩu" value="">
+        <input class="in4" id="repass" type="password" placeholder="Nhập lại mật khẩu" value="">
+        <button id="DK" onclick="Kiemtra()"><b style="color: white;">Đăng ký</b></button>
+    </div>
+    <script type="text/javascript" language="javascript">
+        function Kiemtra() {
+            let tdn= document.getElementById("ten").value;
+            let email= document.getElementById("email").value;
+            let pass = document.getElementById("pass").value;
+            let repass = document.getElementById("repass").value;
+            var dem=0;
+            let ktr=6;
+            for(let h of pass){
+                dem+=1;
+            }
+            if(tdn==""){
+                alert("Bạn chưa nhập tên đăng nhập");
+                tdn.focus();
+            }
+            else{
+                ktr--;
+            }
+            if (email=="") {
+                alert("Bạn chưa nhập email")
+                email.focus();
+            }
+            else{
+                ktr--;
+            }
+            if (pass=="") {
+                alert("Bạn chưa nhập password")
+                pass.focus();
+            }
+            else{
+                ktr--;
+            }
+            if (dem<8) {
+                alert("Mật khẩu tối thiểu 8 ký tự")
+            }
+            else{
+                ktr--;
+            }
+            if (repass=="") {
+                alert("Bạn chưa nhập lại password")
+                password.focus();
+            }
+            else{
+                ktr--;
+            }
+            if(pass!=repass){
+                alert("Mật khẩu nhập lại không đúng")
+            }
+            else{
+                ktr--;
+            }
+            if (ktr==0) {
+                window.location.assign("Dangnhap.html")
+            }
+        }
+    </script>
+</body>
+</html>

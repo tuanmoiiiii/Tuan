@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="S24.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="menu">
+        <div id="menu1">
+            <div class="">
+                <img class="ma" id="main" src="images/Iphone 15/anh1.webp" alt="">
+            </div>
+            <div class="menu11">
+                <div class="borders">
+                    <img class="im" src="images/Iphone 15/anh1.webp" data-full="images/Iphone 15/anh1.webp" alt="">
+                </div>
+                <div class="borders">
+                    <img class="im" src="images/Iphone 15/anh2.webp" data-full="images/Iphone 15/anh2.webp" alt="">
+                </div>
+                <div class="borders">
+                    <img class="im" src="images/Iphone 15/anh3.webp" data-full="images/Iphone 15/anh3.webp" alt="">
+                </div>
+                <div class="borders">
+                    <img class="im" src="images/Iphone 15/anh4.webp" data-full="images/Iphone 15/anh4.webp" alt="">
+                </div>
+                <div class="borders">
+                    <img class="im" src="images/Iphone 15/anh5.webp" data-full="images/Iphone 15/anh5.webp" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="menu2">
+            <p style="font-size: 25px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><b id="p0">iPhone 15 Pro Max 256GB</b></p>
+            <div style="display: flex;">
+                <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: red;font-size: 27px;"><b id="p1">29.690.000₫</b></p>
+                <p style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: grey;font-size: 20px;margin-top: 30px;margin-left: 20px;"><del id="p2">34.990.000₫</del></p>
+            </div>
+            <div style="width: 100%;height: 50px;display: flex;background-color: rgba(128, 128, 128, 0.312);">
+                <div class="choice-gia" id="bt1">
+                    <input style="margin-top: 10px;" type="radio" name="DL">256GB<br>29.690.000₫
+                </div>
+                <div class="choice-gia" id="bt2">
+                    <input style="margin-top: 10px;" type="radio" name="DL">512GB<br>36.590.000₫
+                </div>
+                <div class="choice-gia" id="bt3">
+                    <input style="margin-top: 10px;" type="radio" name="DL">1TB<br>42.990.000₫
+                </div>
+            </div>
+            <div class="ttsp" style="background-color: azure;border: 1px solid rgba(128, 128, 128, 0.514); margin-top: 20px; height: 180px;border-radius: 5px;">
+                <p style="margin-left: 20px;">Màn hình: 6.7 inch, OLED, Super Retina XDR, 2796 x 1290 Pixels</p>
+                <p style="margin-left: 20px;">Camera sau: 48.0 MP + 12.0 MP + 12.0 MP</p>
+                <p style="margin-left: 20px;">Camera Selfie: 12.0 MP</p>
+                <p style="margin-left: 20px;">CPU: Apple A17 Pro</p>
+                <p id="p3" style="margin-left: 20px;">Bộ nhớ trong: 256GB</p>
+            </div>
+            <button>Thêm vào giỏ hàng</button>
+        </div>
+    </div>
+    <script type="text/javascript" language="javascript">
+        const main = document.getElementById('main');
+        const doianh = document.querySelectorAll('.im');
+
+        doianh.forEach(doianh => {
+            doianh.addEventListener('mouseenter', () => {
+                const anhmoi = doianh.getAttribute('data-full');
+                main.src = anhmoi;
+            });
+        });
+        $(document).ready(function(){
+            $("#bt1").click(function(){
+                $("#p0").text("iPhone 15 Pro Max 256GB");
+                $("#p1").text("29.690.000₫");
+                $("#p2").text("34.990.000₫");
+                $("#p3").text("Bộ nhớ trong: 256GB");
+                $(this).css({"background-color": "rgba(128, 128, 128, 0.836)"})
+                $("#bt2").css({"background-color": ""})
+                $("#bt3").css({"background-color": ""})
+            });
+            $("#bt2").click(function(){
+                $("#p0").text("iPhone 15 Pro Max 512GB");
+                $("#p1").text("36.590.000₫");
+                $("#p2").text("40.990.000₫");
+                $("#p3").text("Bộ nhớ trong: 512GB");
+                $(this).css({"background-color": "rgba(128, 128, 128, 0.836)"})
+                $("#bt1").css({"background-color": ""})
+                $("#bt3").css({"background-color": ""})
+            });
+            $("#bt3").click(function(){
+                $("#p0").text("iPhone 15 Pro Max 1TB");
+                $("#p1").text("42.990.000₫");
+                $("#p2").text("46.990.000₫");
+                $("#p3").text("Bộ nhớ trong: 1TB");
+                $(this).css({"background-color": "rgba(128, 128, 128, 0.836)"})
+                $("#bt2").css({"background-color": ""})
+                $("#bt1").css({"background-color": ""})
+            });
+        });
+    </script>
+</body>
+</html>
